@@ -1,9 +1,6 @@
 package com.upgrad.app.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -11,13 +8,14 @@ import lombok.Data;
 @Table(name = "transaction")
 public class TransactionDetailsEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name= "transactionId")
     private Integer transactionId;
 
     @Column(name = "paymentMode")
     private String paymentMode;
 
-    @Id
     @Column(name = "bookingId")
     private Integer bookingId;
 

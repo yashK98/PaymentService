@@ -21,7 +21,7 @@ public class PaymentService {
 
     public ResponseEntity<Integer> postTransaction(TransactionDetailsEntity transactionDetailsEntity){
         log.info("Booking Id :: {} saved to DB", transactionDetailsEntity.getBookingId());
-        TransactionDetailsEntity response =paymentRepo.save(transactionDetailsEntity);
+        TransactionDetailsEntity response = paymentRepo.save(transactionDetailsEntity);
         return new ResponseEntity<>(response.getTransactionId(), HttpStatusCode.valueOf(201));
     }
 }

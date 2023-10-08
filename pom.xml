@@ -12,7 +12,8 @@
   <groupId>com.upgrad.app</groupId>
   <artifactId>PaymentService</artifactId>
   <version>1.0.0</version>
-  <name>Assignment Payment Service Application</name>
+  <name>PaymentService</name>
+  <description>Payment Service Application</description>
 
   <properties>
     <java.version>17</java.version>
